@@ -4,7 +4,7 @@
         version="1.0.0"
         id="MarioPong">
 	<name>MarioPong</name>
-	<content src="local:///index.html" />
+	<content src="index.html" />
 	<author email = "bryanli2011@gmail.com">Boyang Li</author>
 	<description>A simple game used HTML5 and CSS3.</description>
 	<access uri="*" subdomains="true" />
