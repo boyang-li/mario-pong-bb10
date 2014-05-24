@@ -1,0 +1,471 @@
+body{
+    margin:0px;
+}
+
+#button_menu, #button_music_off, #button_music_on, #button_left,
+#button_right, #button_sfx_off, #button_sfx_on, #game_area_bg { opacity: 0.8; }
+
+#button_menu, #button_music_off, #button_music_on, #button_left,
+#button_right, #button_sfx_off, #button_sfx_on,#dialog_container { -webkit-transform:translateZ(0); }
+
+#message {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 100%;
+    padding-bottom: 25px;
+}
+
+#gameplay_screen{
+    font-family: "verdana", sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#resume_game {
+    display:block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 25px;
+}
+
+#exit_to_main {
+    display:block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about{
+    width:80%;
+    position:absolute;
+    left:10%;
+    top:30%;
+    z-index:1;
+    -webkit-transform:translateZ(0);
+}
+
+
+#main_logo{
+    width:100%;
+    position:absolute;
+    z-index:4;
+    -webkit-transform:translateZ(0);
+}
+
+#main_bg{
+    width:65%;
+    height:65%;
+    position:absolute;
+    left:20%;
+    top:25%;
+    z-index:1;
+    -webkit-transform:translateZ(0);
+}
+
+
+#button_play{
+    width:40%;
+    position:absolute;
+    left:32%;
+    top:45%;
+    z-index:3;
+    -webkit-transform:translateZ(0);
+}
+
+#button_about{
+    width:40%;
+    position:absolute;
+    left:32%;
+    top:65%;
+    z-index:2;
+    -webkit-transform:translateZ(0);
+}
+
+#button_return{
+    width:20%;
+    position:absolute;
+    right:15%;
+    bottom:10%;
+    z-index:2;
+    -webkit-transform:translateZ(0);
+}
+
+#start{
+    position:absolute;
+    width:40%;
+    left:32%;
+    bottom:5%;
+    -webkit-transform:translateZ(0);
+}
+
+@media screen and (orientation:landscape){
+#button_music_on, #button_music_off {
+    position:absolute;
+    left:3.5%;
+    top:6%;
+    width: 6%;
+}
+
+#button_sfx_on, #button_sfx_off {
+    position:absolute;
+    left:10.5%;
+    top:6%;
+    width: 6%;
+}
+
+#button_menu {
+    position:absolute;
+    left:4%;
+    top:20%;
+    width:12%;
+}
+
+#button_left{
+    position:absolute;
+    left:2%;
+    bottom: 2%;
+    width:16%;
+    z-index:99;
+}
+
+#button_right{
+    position:absolute;
+    right:2%;
+    bottom:2%;
+    width:16%;
+    z-index:99;
+}
+
+
+#dialog_container {
+    width: 40%;
+    position: relative;
+    top: 30%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 99;
+}
+}
+
+@media screen and (orientation:landscape){
+
+#welcome_screen{
+    width:50%;
+    height:65%;
+    position:absolute;
+    top:25%;
+    left:25%;
+    -webkit-transform:translateZ(0);
+}
+
+#game_canvas{
+    position:absolute;
+    width:60%;
+    height:90%;
+    background:rgba(0,0,0,0.25);
+    top:50%;
+    left:50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #00a8df;
+    border-radius: 8px;
+}
+
+#container{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:'black';
+    overflow:hidden;
+}
+
+#game_area{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:50%;
+    left:50%;
+}
+
+#game_area_bg{
+    position:absolute;
+    z-index:-1;
+    width:100%;
+    height: 100%;
+}
+
+#control_instruction1{
+    position:absolute;
+    z-index:9;
+    left:15%;
+    bottom:23%;
+    width:10%;
+}
+#control_instruction2{
+    position:absolute;
+    right:17%;
+    bottom:23%;
+    z-index:9;
+    width:10%;
+}
+
+
+#logo{
+    position:absolute;
+    top:15%;
+    left:10px;
+    -webkit-transform:translateZ(0);
+}
+
+#button_replay{
+    position:absolute;
+    left:47%;
+    top:60%;
+    width:7%
+}
+
+#gameover{
+    width:30%;
+    position:absolute;
+    left:35%;
+    top:40%;
+    z-index:1;
+    -webkit-transform:translateZ(0);
+}
+
+#miss{
+    width:15%;
+    position:absolute;
+    left:42.5%;
+    top:40%;
+    z-index:1;
+    -webkit-transform:translateZ(0);
+}
+
+#launch_instruction{
+    width:35%;
+    position:absolute;
+    left:32%;
+    top:45%;
+    z-index:1;
+    -webkit-transform:translateZ(0);
+}
+}
+
+@media screen and (orientation:portrait){
+
+#lives_stat{
+    position: absolute;
+    bottom:25%;
+    right: 15%;
+}
+
+#button_music_on, #button_music_off {
+    position:absolute;
+    left:30%;
+    bottom:5%;
+    width: 10%;
+}
+
+#button_sfx_on, #button_sfx_off {
+    position:absolute;
+    right:30%;
+    bottom:5%;
+    width: 10%;
+}
+
+#button_menu {
+    position:absolute;
+    left:40%;
+    bottom:15%;
+    width:20%;
+}
+
+#button_left{
+    position:absolute;
+    left:2%;
+    bottom: 2%;
+    width:28%;
+    z-index:99;
+}
+
+#button_right{
+    position:absolute;
+    right:2%;
+    bottom:2%;
+    width:28%;
+    z-index:99;
+}
+
+#welcome_screen{
+        width:80%;
+        height:50%;
+        position:absolute;
+        top:30%;
+        left:8%;
+        -webkit-transform:translateZ(0);
+}
+
+#game_canvas{
+    position:absolute;
+    width:90%;
+    height:90%;
+    background:rgba(0,0,0,0.25);
+    top:45%;
+    left:50%;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #B45F04;
+    border-radius: 8px;
+}
+
+#container{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+#game_area{
+    position:absolute;
+    width:100%;
+    height:120%;
+    top:50%;
+    left:50%;
+}
+
+#game_area_bg{
+    position:absolute;
+    z-index:-1;
+    width: 100%;
+    height:100%;
+}
+#control_instruction1{
+    position:absolute;
+    z-index:9;
+    left:20%;
+    bottom:15%;
+    width:20%;
+}
+#control_instruction2{
+    position:absolute;
+    right:20%;
+    bottom:15%;
+    z-index:9;
+    width:20%;
+}
+
+#logo{
+    position:absolute;
+    top:-10px;
+}
+
+
+#button_replay{
+    position:absolute;
+    left:46%;
+    top:50%;
+    width:12%;
+}
+
+#gameover{
+    width:50%;
+    position:absolute;
+    left:25%;
+    top:30%;
+    z-index:1;
+}
+
+#miss{
+    width:30%;
+    position:absolute;
+    left:35%;
+    top:30%;
+    z-index:1;
+    -webkit-transform:translateZ(0);
+}
+
+#launch_instruction{
+    width:50%;
+    position:absolute;
+    left:25%;
+    top:35%;
+    z-index:1;
+    -webkit-transform:translateZ(0);
+}
+#drag_instruction, #tilt_instruction{
+    width:70%;
+    position:absolute;
+    left:15%;
+    top:40%;
+    z-index:1;
+    -webkit-transform:translateZ(0);
+}
+#dialog_container {
+    width: 60%;
+    position: relative;
+    top: 20%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 99;
+}
+}
+
+div.loading-invisible{
+    display:none;
+}
+div.loading-visible{
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    text-align:center;
+    background-color:black;
+    z-index:9;
+    color:white;
+}
+#loading img{
+    position:absolute;
+    top: 40%;
+    left:40%;
+    width:20%;
+}
+
+
+div.loading-invisible{
+    display:none;
+}
+div.loading-visible{
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    text-align:center;
+    background-color:black;
+    z-index:9;
+    color:white;
+}
+#loading img{
+    position:absolute;
+    top: 50%;
+    left:40%;
+    width:20%;
+}
+
+/* start animation */
+#splash_container{
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:0;
+    -webkit-transform:translateZ(0);
+}

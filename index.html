@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="touch-event-mode" content="pure-with-mouse-conversion">
+        <title>MarioPong</title>
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+        <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+        <script src="js/alice.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+	<script src="js/loading.js"></script>
+        <!-- Body starts here -->
+        <div id="container">
+            <!--background-->
+            <img id="game_area_bg" src="./imgs/background.png"></img>
+            <!-- loading screen -->
+            <div id="splash_screen">
+                <div id="splash_container">                   
+                    <img id="start" src="./imgs/start.png"></img>
+                </div>
+            </div>
+            <!-- loading screen end -->
+            <!-- welcome Screen -->
+            <div id="welcome_screen">
+                <img id="main_logo" src="./imgs/logo_L.png"></img>
+                <div id="menu">
+                    <img id="main_bg" src="./imgs/bg_main.png"></img>
+                    <img id="button_play" src="./imgs/button_play.png"></img>
+                    <img id="button_about" src="./imgs/button_about.png"></img>
+                </div>
+                <!-- About screen -->
+                <div id="about_screen">
+                    <img id="about" src="./imgs/about.png"></img>
+                    <img id="button_return" src="./imgs/button_back.png"></img>
+                </div>
+            </div>
+            <!-- welcome screen end -->
+            <!-- gameplay screen -->
+            <div id="gameplay_screen">
+                <!--Game Area-->
+                <div id="game_area">
+                    <canvas id="game_canvas"></canvas>
+                    
+                    <div id="game_status">
+                        <img id="gameover" src="./imgs/gameover.png"></img>
+                        <img id="miss" src="./imgs/miss.png"></img>
+                    </div>
+                    <!--Instructions-->
+                    <img id="launch_instruction" src="./imgs/launch.png"></img>
+                </div>
+                
+                <div id="lives_stat">Lives <span id="life"></span></div>
+                
+                <!--Game control buttons-->
+                <div id="button_container">
+                    <div id="control_button">
+                        <div id="movement_control">
+                            <img id="button_left" src="./imgs/button_left.png"></img>
+                            <img id="button_right" src="./imgs/button_right.png"></img>
+                        </div>
+                    </div>
+                    <img id="button_replay" src="./imgs/button_replay.png"></img>
+                    <div>
+                        <img id="button_music_on" src="./imgs/button_music_on.png"></img>
+                        <img id="button_music_off" src="./imgs/button_music_off.png"></img>
+                        <img id="button_sfx_on" src="./imgs/button_sfx_on.png"></img>
+                        <img id="button_sfx_off" src="./imgs/button_sfx_off.png"></img>
+                        <img id="button_menu" src="./imgs/button_menu.png"></img>
+                    </div>
+                </div>
+            </div>
+            <!-- dialog -->
+            <div id="dialog_container">
+                <img id="message"></img>
+                <div id="pause_menu">
+                    <img id="resume_game" src="./imgs/resume_game.png"></img>
+                    <img id="exit_to_main" src="./imgs/exit_to_main.png"></img>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="js/config.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/screen.js"></script>
+    <script src="js/gameplay.js"></script>
+    <script src="js/gameplay_animation.js"></script>
+    <script src="js/physics.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/splash.js"></script>
+    <script src="js/draw.js"></script>
+    <script src="js/resize.js"></script>
+    <script src="js/control.js"></script>
+    <script src="js/dialog.js"></script>
+</html>
