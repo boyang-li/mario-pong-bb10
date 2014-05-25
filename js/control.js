@@ -7,27 +7,34 @@
 var rightDown = false;
 var leftDown = false;
 
+// start or restart the game
+var restartDown = false;
+
 // keybord
 function onKeyDown(evt)
 {
     // right arrow
     if (evt.keyCode == 39) {
         rightDown = true;
-    // left arrow
+        // left arrow
     } else if (evt.keyCode == 37) {
         leftDown = true;
+    } else if (evt.keyCode == 32) {
+        restartDown = true;
     }
 }
 
 function onKeyUp(evt)
 {
     switch (evt.keyCode) {
+        // restart button
+ 
         // right arrow
-        case 39:
+        case 39:         
             rightDown = false;
             break;
         // left arrow
-        case 37:
+        case 37:      
             leftDown = false;
             break;
         // 'Esc' to pause
@@ -37,9 +44,7 @@ function onKeyUp(evt)
             break;
         // 'Space' to launch ball
         case 32:
-//            if (!game.gameplay.launched()) {
-                game.gameplay.launch();
-//            } 
+            restartDown = false;
             break;
         // 'a' -> music [audio] mode
         case 65:
@@ -71,7 +76,6 @@ function onKeyUp(evt)
 $(document).keydown(onKeyDown);
 $(document).keyup(onKeyUp);
 
-
 // Touch buttons
 // get touch elements
 var buttonLeft = document.getElementById('button_left');
@@ -79,12 +83,30 @@ var buttonRight = document.getElementById('button_right');
 var buttonPlay = document.getElementById('button_play');
 var buttonAbout = document.getElementById('about');
 var buttonReturn = document.getElementById('button_return');
-var gameArea = document.getElementById('game_area');
-var buttonReplay = document.getElementById('button_replay')
+//var gameArea = document.getElementById('game_area');
+var buttonRestart = document.getElementById('button_replay')
+
+function restartButtonDown(evt) {
+    evt.preventDefault();
+    if (!game.gameplay.launched()) {
+        game.gameplay.launch();
+    }
+    buttonRestart.style.opacity = 1;
+    restartDown = true;
+}
+
+function restartButtonUp(evt) {
+    evt.preventDefault();
+    buttonRestart.style.opacity = 0.8;
+    restartDown = false;
+}
 
 function leftButtonDown(evt)
 {
     evt.preventDefault();
+    if (!game.gameplay.launched()) {
+        game.gameplay.launch();
+    }
     buttonLeft.style.opacity = 1;
     leftDown = true;
 }
@@ -97,12 +119,16 @@ function leftButtonUp(evt)
 function rightButtonDown(evt)
 {
     evt.preventDefault();
+    if (!game.gameplay.launched()) {
+        game.gameplay.launch();
+    }
     buttonRight.style.opacity = 1
     rightDown = true;
 }
 
 function rightButtonUp(evt)
 {
+    evt.preventDefault();
     buttonRight.style.opacity = 0.8;
     rightDown = false;
 }
@@ -125,10 +151,10 @@ function touchHandler (event) {
     }
 
     launchHandler(event);
-
 }
 
-gameArea.addEventListener('touchend', function () { touchOnMario = false; });
+buttonLeft.addEventListener('touchstart', restartButtonDown);
+buttonLeft.addEventListener('touchend', restartButtonUp);
 buttonLeft.addEventListener('touchstart', leftButtonDown);
 buttonLeft.addEventListener('touchend', leftButtonUp);
 buttonRight.addEventListener('touchstart', rightButtonDown);
@@ -141,5 +167,5 @@ buttonReturn.addEventListener('show_welcome', true);
 function resetControl() {
     leftDown = false;
     rightDown = false;
+    restartButtonDown = false;
 }
-
